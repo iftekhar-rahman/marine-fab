@@ -29,8 +29,12 @@
 }
 
 // .header-area
+.sticky-wrapper.is-sticky .header-area{
+    z-index: 999 !important;
+}
 .header-area {
-    background: #ddd;
+    background: #fff;
+    box-shadow: 0px 8px 12px -10px rgba(0, 0, 0, 0.75);
     .header-search-box {
         position: absolute;
         right: 10px;
@@ -43,15 +47,46 @@
         height: 100px;
         display: flex;
         align-items: center;
+        @include all-below-med{
+            height: 80px;
+        }
         img {
             max-width: 250px;
+            @include all-below-med{
+                max-width: 200px;
+            }
+            @include all-below-mobile-lg{
+                max-width: 170px;
+            }
         }
+    }
+    @include all-below-med{
+        .container{
+            position: relative;
+            .menu-bars {
+                position: absolute;
+                top: 25px;
+                right: 15px;
+                cursor: pointer;
+                @include all-below-sm{
+                    right: 15px;
+                }
+                span {
+                    display: block;
+                    width: 35px;
+                    height: 4px;
+                    background-color: #1B75BB;
+                    margin: 4px 0;
+                }
+            }
+        }
+        
     }
 }
 //mainmenu
 .mainmenu {
     ul {
-        margin-right: 45px;
+       
         margin-top: 29px;
         li {
             display: inline-block;
@@ -61,12 +96,67 @@
                 padding: 7px 20px;
                 transition: all .5s ease;
                 border: 1px solid transparent;
+                @include all-below-med{
+                    border: 0;
+                }
             }
             &.active a {
                 border: 1px solid #5B6C99;
+                @include all-below-med{
+                    border: 0;
+                }
             }
+        }
+    }
+    @include all-below-med{
+        &.mr-5{
+            margin-right: 0 !important;
         }
     }
 }
 
 
+// Mobile menu
+.mainmenu {
+    @include all-below-med{
+        position: fixed;
+        right:-300px;
+        top: 0;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px -5px #000;
+        width: 250px;
+        text-align: center !important;
+        height: 100%;
+        padding: 40px 20px 0;
+        z-index: 99999;
+        transition: all .5s ease;
+        &.active {
+            right: 0;
+        }
+        .close-btn {
+            position: absolute;
+            left: 9px;
+            padding: 10px;
+            top: 0;
+            cursor: pointer;
+            transition: all .3s ease;
+            &:hover {
+                color: #1B75BB;
+            }
+        }
+    }
+    @include all-below-med{
+        ul {
+            
+            li {
+                display: block;
+                border-bottom: 1px solid #ddd;
+                a {
+                    padding: 10px 6px 10px 6px;
+                }
+                
+            }
+        }
+    }
+    
+}

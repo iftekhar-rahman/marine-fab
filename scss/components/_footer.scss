@@ -4,6 +4,19 @@
     color: #fff;
     padding: 10px 0;
     font-size: 14px;
+    .single-footer {
+        @include all-below-med{
+            margin-bottom: 5px;
+        }
+    }
+    @include all-below-med{
+        text-align: center;
+    }
+    .text-right{
+        @include all-below-med{
+            text-align: center !important;
+        }
+    }
     a {
         margin-right: 10px;
         &:hover {

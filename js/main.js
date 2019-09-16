@@ -1,32 +1,15 @@
 jQuery(document).ready(function($){
 
-    // $('select').niceSelect();
+    $(".menu-bars").on('click', function(){
+        $('.mainmenu').addClass('active');
+    });
+    $(".close-btn").on('click', function(){
+        $('.mainmenu').removeClass('active');
+    });
 
-    // homepage-slides
-	// $(".homepage-slides").owlCarousel({
-	// 	items: 1,
-	// 	loop: true,
-	// 	nav: true,
-	// 	dots: false,
-    //     autoplay: false,
-    //     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-	// });
+    // $('#menu').slicknav();
 
-    
-
-    // $("#range_49").ionRangeSlider({
-    //     type: "single",
-    //     min: 150,
-    //     max: 250,
-    //     from: 200,
-    //     to: 250,
-    //     prefix: "£",
-    //     step: 1,
-    //     onFinish: function(data) {
-    //         maxValue = data.from;
-    //         alert("Your Value: " + maxValue);
-    //     }
-    // });
+    $(".header-area").sticky({ topSpacing: 0 });
 
     $(".mainmenu ul li").on('click', function(){
         $('.mainmenu ul li').removeClass('active');
@@ -42,71 +25,27 @@ jQuery(document).ready(function($){
         autoplay: false,
         margin: 15,
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        responsive: {
-            0: {
-                items: 2,
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items: 1,
                 margin: 10,
-                // nav: false
             },
-            580: {
+            // breakpoint from 480 up
+            480 : {
+                items: 2,
+            },
+            // breakpoint from 768 up
+            768 : {
                 items: 3,
-                // nav: false
             },
-            720: {
+            991 : {
                 items: 4,
-                // nav: false
             }
-
         }
     });
 
-    // $(".feature-carousel-wrap").owlCarousel({
-    //     items: 4,
-    //     loop: true,
-    //     nav: true,
-    //     dots: true,
-    //     autoplay: false,
-    //     margin: 15,
-    //     navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-    //     responsive: {
-    //         0: {
-    //             items: 1,
-    //             margin: 0,
-    //             nav: false
-    //         },
-    //         481: {
-    //             items: 2,
-    //             margin: 15,
-    //             nav: false
-    //         },
-    //         720: {
-    //             items: 3,
-    //             margin: 15,
-    //             nav: false
-    //         },
-    //         960: {
-    //             items: 3,
-    //             margin: 25,
-    //         },
-    //         1140: {
-    //             items: 4
-    //         }
-
-    //     }
-    // });
-
-
-
-
-	// $(".bodytype-carousel-wrap").magnificPopup({
-	// 	type: 'image',
-    //     gallery: {
-    //         enabled: true
-    //     }
-	// });
-
-
-
+    
 
     
 

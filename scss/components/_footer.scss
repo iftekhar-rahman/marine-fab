@@ -1,0 +1,13 @@
+/*============== Footer CSS ================*/
+.footer-area {
+    background-color: #262626;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+    a {
+        margin-right: 10px;
+        &:hover {
+            color: #5B6C99;
+        }
+    }
+}

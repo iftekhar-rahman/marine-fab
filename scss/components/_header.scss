@@ -1,0 +1,72 @@
+/*=============== Header CSS ==================*/
+
+// .header-top-area 
+.header-top-area {
+    background-color: #5B6C99;
+    padding: 6px 0 7px;
+    ul{
+        li{
+            display: inline-block;
+            color: #fff;
+            margin: 0 6px;
+            opacity: .6;
+            transition: all .5s ease;
+            font-size: 16px;
+            &:hover{
+                opacity: 1;
+            }
+            a{
+                margin-right: 5px;
+                display: block;
+                color: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+    .header-contact-info {
+        margin-left: 10px;
+    }
+}
+
+// .header-area
+.header-area {
+    background: #ddd;
+    .header-search-box {
+        position: absolute;
+        right: 10px;
+        top: 31px;
+        padding: 5px 8px;
+        cursor: pointer;
+        color: #5B6C99;
+    }
+    .site-logo {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        img {
+            max-width: 250px;
+        }
+    }
+}
+//mainmenu
+.mainmenu {
+    ul {
+        margin-right: 45px;
+        margin-top: 29px;
+        li {
+            display: inline-block;
+            a {
+                display: block;
+                color: #0c1a3e;
+                padding: 7px 20px;
+                transition: all .5s ease;
+                border: 1px solid transparent;
+            }
+            &.active a {
+                border: 1px solid #5B6C99;
+            }
+        }
+    }
+}
+
+

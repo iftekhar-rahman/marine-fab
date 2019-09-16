@@ -1,0 +1,88 @@
+/*================Home Page CSS===============*/
+
+.banner-area{
+    @extend %backgroundimage;
+    height: 500px;
+}
+
+
+//.services-area
+.services-area {
+    padding: 70px 0;
+    .section-title{
+        margin-bottom: 70px;
+    }
+    .single-service-item {
+        padding: 40px 30px;
+        // border: 1px solid #ddd;
+        transition: all .7s ease;
+        h3{
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        &:hover {
+            box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.20);
+            .service-icon{
+                background-color: #5B6C99;;
+                color: #fff;
+            }
+        }
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid #5B6C99;
+            line-height: 80px;
+            font-size: 35px;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            color: #5B6C99;
+            transition: all .7s ease;
+            i {
+                font-size: 35px;
+                line-height: 80px;
+            }
+        }
+    }
+}
+
+
+// .companies-area 
+.companies-area {
+    padding: 70px 0;
+    .section-title {
+        margin-bottom: 30px;
+        text-transform: capitalize;
+    }
+    .single-logo-item {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ddd;
+        .single-logo-inner {
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+.companies-area .owl-nav div {
+    right: 0;
+    top: -47px;
+}
+
+.companies-area .owl-nav div.prev {
+    left: auto;
+    right: 0;
+}
+.companies-area .owl-nav {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+.companies-area .owl-nav div.owl-prev {
+    left: -95px;
+}

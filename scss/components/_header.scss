@@ -2,7 +2,7 @@
 
 // .header-top-area 
 .header-top-area {
-    background-color: #5B6C99;
+    @extend %primary-bg-color;
     padding: 6px 0 7px;
     ul{
         li{
@@ -41,7 +41,7 @@
         top: 31px;
         padding: 5px 8px;
         cursor: pointer;
-        color: #5B6C99;
+        @extend %primary-color;
     }
     .site-logo {
         height: 100px;
@@ -75,7 +75,7 @@
                     display: block;
                     width: 35px;
                     height: 4px;
-                    background-color: #1B75BB;
+                    background-color: $primary-color;
                     margin: 4px 0;
                 }
             }
@@ -101,7 +101,7 @@
                 }
             }
             &.active a {
-                border: 1px solid #5B6C99;
+                border: 1px solid $primary-color;
                 @include all-below-med{
                     border: 0;
                 }
@@ -141,7 +141,7 @@
             cursor: pointer;
             transition: all .3s ease;
             &:hover {
-                color: #1B75BB;
+                color: $primary-color;
             }
         }
     }

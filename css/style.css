@@ -8,9 +8,6 @@
 .owl-nav div {
   display: inline-block; }
 
-.boxed-btn {
-  position: relative; }
-
 .owl-nav div {
   position: absolute; }
 
@@ -19,16 +16,7 @@
   background-position: center;
   background-color: #ddd; }
 
-.boxed-btn:after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  z-index: -1; }
-
-a, button, img, input, span, .owl-nav div, .boxed-btn:after {
+a, button, img, input, span, .owl-nav div {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -40,9 +28,6 @@ a, button, img, input, span, .owl-nav div, .boxed-btn:after {
 
 .owl-nav div {
   border-radius: 50%; }
-
-.boxed-btn {
-  font-family: "Roboto", sans-serif; }
 
 /*======fonts==============*/
 /*=================== Reset CSS =====================*/
@@ -124,9 +109,9 @@ input[type=text], input[type=email], input[type=password], input[type=tel], inpu
   .form-group .form-control:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
-    border-color: #2a7d2e; }
+    border-color: #0033CC; }
   .form-group .form-control:hover {
-    border-color: #2a7d2e; }
+    border-color: #0033CC; }
 
 input[type=submit], button[type=submit] {
   cursor: pointer; }
@@ -147,14 +132,14 @@ textarea {
   height: 150px;
   padding: 10px 20px;
   width: 100%;
-  border-color: #ced4da;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  border: 1px solid #ced4da; }
   textarea:focus {
-    border-color: #2a7d2e; }
+    border-color: #5B6C99; }
   textarea:hover {
-    border-color: #2a7d2e; }
+    border-color: #5B6C99; }
 
 /*========.section-title=========*/
 .section-title {
@@ -171,7 +156,6 @@ textarea {
   bottom: -8px;
   width: 60px;
   height: 1px;
-  background-color: #5B6C99;
   content: "";
   margin-left: -30px; }
 
@@ -189,14 +173,11 @@ textarea {
     display: inline-block;
     margin: 0 5px;
     border-radius: 50%; }
-    .owl-dots div.active {
-      background-color: #0DA0F4; }
 
 /*=====owl nav customization======*/
 .owl-nav div {
   left: -10px;
   top: 50%;
-  color: #5B6C99;
   margin-top: -20px;
   border: 1px solid #ddd;
   width: 40px;
@@ -210,8 +191,7 @@ textarea {
     padding-left: 5px;
     padding-right: 0; }
   .owl-nav div:hover {
-    color: #ffffff;
-    background-color: #5B6C99; }
+    color: #ffffff; }
 
 select {
   font-size: 19px;
@@ -247,7 +227,6 @@ select {
 
 /*=============== Header CSS ==================*/
 .header-top-area {
-  background-color: #5B6C99;
   padding: 6px 0 7px; }
   .header-top-area ul li {
     display: inline-block;
@@ -280,8 +259,7 @@ select {
     right: 10px;
     top: 31px;
     padding: 5px 8px;
-    cursor: pointer;
-    color: #5B6C99; }
+    cursor: pointer; }
   .header-area .site-logo {
     height: 100px;
     display: -webkit-box;
@@ -317,7 +295,7 @@ select {
           display: block;
           width: 35px;
           height: 4px;
-          background-color: #1B75BB;
+          background-color: #0033CC;
           margin: 4px 0; } }
 
 .mainmenu ul {
@@ -336,7 +314,7 @@ select {
         .mainmenu ul li a {
           border: 0; } }
     .mainmenu ul li.active a {
-      border: 1px solid #5B6C99; }
+      border: 1px solid #0033CC; }
       @media (max-width: 991px) {
         .mainmenu ul li.active a {
           border: 0; } }
@@ -373,7 +351,7 @@ select {
       -o-transition: all .3s ease;
       transition: all .3s ease; }
       .mainmenu .close-btn:hover {
-        color: #1B75BB; } }
+        color: #0033CC; } }
 
 @media (max-width: 991px) {
   .mainmenu ul li {
@@ -399,39 +377,13 @@ select {
       text-align: center !important; } }
   .footer-area a {
     margin-right: 10px; }
-    .footer-area a:hover {
-      color: #5B6C99; }
 
 /*=========== Button CSS ==========*/
-.boxed-btn {
-  background-color: #DB2D2E;
-  padding: 8px 20px;
-  font-weight: 600;
-  font-size: 17px;
-  border: 0;
-  z-index: 2;
-  text-transform: capitalize; }
-  .boxed-btn:after {
-    background-color: #323232;
-    -webkit-transform: scaleY(0);
-    -ms-transform: scaleY(0);
-    transform: scaleY(0); }
-  .boxed-btn:hover:after {
-    -webkit-transform: scaleY(1);
-    -ms-transform: scaleY(1);
-    transform: scaleY(1); }
+.owl-nav div, .header-area .header-search-box, .footer-area a:hover, .services-area .single-service-item .service-icon {
+  color: #0033CC; }
 
-.bordered-btn {
-  border: 2px solid #2A7D2E;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16px;
-  background: transparent; }
-  .bordered-btn:hover {
-    color: #154D32; }
-
-.boxed-btn, .boxed-btn:hover {
-  color: #ffffff; }
+.section-border:after, .section-border:before, .owl-dots div.active, .owl-nav div:hover, .header-top-area, .services-area .single-service-item:hover .service-icon {
+  background-color: #0033CC; }
 
 /*================Home Page CSS===============*/
 .banner-area {
@@ -517,19 +469,17 @@ select {
           -webkit-box-shadow: none;
           box-shadow: none; } }
       .services-area .single-service-item:hover .service-icon {
-        background-color: #5B6C99;
         color: #fff; }
     .services-area .single-service-item .service-icon {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      border: 1px solid #5B6C99;
+      border: 1px solid #0033CC;
       line-height: 80px;
       font-size: 35px;
       text-align: center;
       margin: 0 auto;
       margin-bottom: 40px;
-      color: #5B6C99;
       -webkit-transition: all .7s ease;
       -o-transition: all .7s ease;
       transition: all .7s ease; }

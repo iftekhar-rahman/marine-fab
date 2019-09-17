@@ -92,7 +92,7 @@
                 box-shadow: none;
             }
             .service-icon{
-                background-color: #5B6C99;;
+                @extend %primary-bg-color;
                 color: #fff;
             }
         }
@@ -100,13 +100,13 @@
             width: 80px;
             height: 80px;
             border-radius: 50%;
-            border: 1px solid #5B6C99;
+            border: 1px solid $primary-color;
             line-height: 80px;
             font-size: 35px;
             text-align: center;
             margin: 0 auto;
             margin-bottom: 40px;
-            color: #5B6C99;
+            @extend %primary-color;
             transition: all .7s ease;
             i {
                 font-size: 35px;

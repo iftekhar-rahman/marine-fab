@@ -20,7 +20,7 @@
     a {
         margin-right: 10px;
         &:hover {
-            color: #5B6C99;
+            @extend %primary-color;
         }
     }
 }

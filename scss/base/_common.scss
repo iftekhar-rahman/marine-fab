@@ -28,10 +28,10 @@ input[type=text], input[type=email], input[type=password], input[type=tel], inpu
     .form-control{
         &:focus {
             box-shadow: none;
-            border-color: #2a7d2e;
+            border-color: $primary-color;
         }
         &:hover {
-            border-color: #2a7d2e;
+            border-color: $primary-color;
         }
     }
 }
@@ -53,13 +53,13 @@ textarea {
     padding: 10px 20px;
     width: 100%;
     // margin-bottom: -7px;
-    border-color: #ced4da;
     transition: all .3s ease;
+    border: 1px solid #ced4da;
     &:focus {
-        border-color: #2a7d2e;
+        border-color: #5B6C99;
     }
     &:hover {
-        border-color: #2a7d2e;
+        border-color: #5B6C99;
     }
 }
 
@@ -78,7 +78,7 @@ textarea {
     bottom: -8px;
     width: 60px;
     height: 1px;
-    background-color: #5B6C99;
+    @extend %primary-bg-color;
     content: "";
     margin-left: -30px;
 }
@@ -97,7 +97,7 @@ textarea {
         margin: 0 5px;
         border-radius: 50%;
         &.active {
-            background-color: #0DA0F4;
+            @extend %primary-bg-color;
         }
     }
 }
@@ -108,7 +108,7 @@ textarea {
     @extend %posabsolute;
     left: -10px;
     top: 50%;
-    color: #5B6C99;
+    @extend %primary-color;
     margin-top: -20px;
     border: 1px solid #ddd;
     width: 40px;
@@ -127,7 +127,7 @@ textarea {
     }
     &:hover {
         color: #ffffff;
-        background-color: #5B6C99;
+        @extend %primary-bg-color;
     }
 }
 
